@@ -110,7 +110,7 @@ fun LoginScreen() {
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
@@ -148,7 +148,8 @@ fun LoginScreen() {
                     }
                     showDialog = true
                 },
-                shape = RoundedCornerShape(0.dp),
+                modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end =  16.dp),
+                shape = RoundedCornerShape(20.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.DarkGray,
                     contentColor = Color.White
@@ -212,7 +213,7 @@ fun RememberMeSwitch() {
 
     var isChecked by remember { mutableStateOf(false) }
     Row(
-        Modifier.fillMaxWidth(),
+        Modifier.fillMaxWidth().padding(start = 16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
 
